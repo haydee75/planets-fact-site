@@ -1,0 +1,164 @@
+header.Menu {
+  height: 85px;
+  padding: 22px 40px 27px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: 1px #393950 solid;
+}
+
+@media screen and (max-width: 1025px) {
+  header.Menu {
+    height: 160px;
+    flex-direction: column;
+    justify-content: inherit;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header.Menu {
+    align-items: initial;
+  }
+
+  header.Menu.menu-visible {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    background: #070724;
+  }
+
+  header.Menu.menu-hidden {
+    height: 68px;
+    overflow: hidden;
+  }
+}
+
+header.Menu h2.title {
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -1.05px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1025px) {
+  header.Menu h2.title {
+    margin: 32px 0 39px 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header.Menu h2.title {
+    height: 68px;
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+    justify-content: space-between;
+  }
+
+  header .menu-visible {
+    height: 598px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 24px;
+    padding: 44px 0 67px 45px;
+  }
+
+  header .menu-hidden {
+    height: 0;
+  }
+}
+
+header.Menu h2.title .logo-svg {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  header.Menu h2.title .logo-svg {
+    display: flex;
+    cursor: pointer;
+  }
+}
+
+header.Menu nav.items a:not(:last-child) {
+  margin-right: 33px;
+}
+
+header.Menu nav.items a {
+  position: relative;
+}
+
+header.Menu nav.items a:before {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 0;
+  bottom: 41px;
+  overflow: hidden;
+  transition: width ease 0.2s;
+}
+
+@media screen and (max-width: 1025px) {
+  header.Menu nav.items a:before {
+    bottom: 0;
+    top: 41px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header.Menu nav.items a:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    bottom: 0;
+    top: 0;
+    left: -45px;
+    transition: none;
+  }
+}
+
+header.Menu nav.items a:hover::before {
+  width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+  header.Menu nav.items a:hover::before {
+    width: 0;
+  }
+}
+
+header.Menu nav.items a.Mercury:before {
+  background: #419ebb;
+}
+
+header.Menu nav.items a.Venus:before {
+  background: #eda249;
+}
+
+header.Menu nav.items a.Earth:before {
+  background: #6d2ed5;
+}
+
+header.Menu nav.items a.Mars:before {
+  background: #d14c32;
+}
+
+header.Menu nav.items a.Jupiter:before {
+  background: #d83a34;
+}
+
+header.Menu nav.items a.Saturn:before {
+  background: #cd5120;
+}
+
+header.Menu nav.items a.Uranus:before {
+  background: #1ec1a2;
+}
+
+header.Menu nav.items a.Neptune:before {
+  background: #2d68f0;
+}

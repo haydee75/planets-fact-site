@@ -1,0 +1,57 @@
+.Planet ul.extra-information {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 165px 56px 165px;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 1025px) {
+  .Planet ul.extra-information {
+    padding: 0 40px 36px 40px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Planet ul.extra-information {
+    flex-direction: column;
+    padding: 28px 24px 47px 24px;
+  }
+}
+
+.Planet ul.extra-information li {
+  max-width: 255px;
+  width: 100%;
+  height: 128px;
+  border: 1px solid #393950;
+  padding: 20px 0 27px 23px;
+}
+
+@media screen and (max-width: 1025px) {
+  .Planet ul.extra-information li {
+    max-width: 164px;
+    height: 88px;
+    padding: 16px 0 19px 15px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Planet ul.extra-information li {
+    max-width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 24px;
+    margin-bottom: 8px;
+  }
+}
+
+.Planet ul.extra-information li h4 {
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}

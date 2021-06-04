@@ -1,0 +1,226 @@
+.Tabs .tab-image {
+  grid-area: image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1025px) {
+  .Tabs .tab-image {
+    height: 460px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Tabs .tab-image {
+    height: 304px;
+  }
+}
+
+.Tabs .tab-image .img {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1025px) {
+  .Tabs .tab-image .img img {
+    width: 28%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Tabs .tab-image .img img {
+    width: 250px;
+  }
+}
+
+.Tabs .tab-image .geo-img {
+  position: absolute;
+  top: 70%;
+  width: 163px;
+}
+
+@media screen and (max-width: 1025px) {
+  .Tabs .tab-image .img img.geo-img {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Tabs .tab-image .img img.geo-img {
+    width: 75px;
+  }
+}
+
+.Tabs .tab-content {
+  margin: 126px 0 39px 0;
+  padding-right: 165px;
+  grid-area: content;
+  max-width: 516px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1025px) {
+  .Tabs .tab-content {
+    max-width: 339px;
+    margin: 0 69px 27px 39px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Tabs .tab-content {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.Tabs .tab-content h1 {
+  margin-bottom: 23px;
+}
+
+@media screen and (max-width: 750px) {
+  .Tabs .tab-content h1 {
+    margin-bottom: 16px;
+  }
+}
+
+.Tabs .tab-content .container > p {
+  margin-bottom: 24px;
+}
+
+@media screen and (max-width: 750px) {
+  .Tabs .tab-content .container > p {
+    margin-bottom: 10px;
+  }
+}
+
+.Tabs .tab-content .container > div a,
+.Tabs .tab-content .container > div > span {
+  font-size: 14px;
+  line-height: 25px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
+.Tabs .tab-content .container > div a > span {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 25px;
+  margin-right: 8px;
+}
+
+.Tabs .tab-content .container > div a {
+  text-decoration: underline;
+}
+
+.Tabs .tab-content .container > div a:hover {
+  opacity: 1;
+}
+
+.Tabs .tab-titles {
+  grid-area: titles;
+  margin-bottom: 87px;
+  padding-right: 165px;
+  max-width: 516px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1025px) {
+  .Tabs .tab-titles {
+    margin: 0 40px 0 70px;
+    padding: 0;
+    width: 281px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Tabs .tab-titles {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 50px;
+  }
+}
+
+.Tabs ul.tab-titles li.title:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 750px) {
+  .Tabs ul.tab-titles li.title:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+.Tabs ul.tab-titles li.title p > span {
+  margin-right: 25px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 750px) {
+  .Tabs ul.tab-titles li.title p,
+  .Tabs ul.tab-titles li.title p > span {
+    margin: auto;
+    font-size: 9px;
+    line-height: 10px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Tabs ul.tab-titles li.title p > span:first-child {
+    display: none;
+  }
+}
+
+.Tabs ul.tab-titles li.title p,
+.Tabs ul.tab-titles li.title span {
+  display: flex;
+}
+
+.Tabs ul.tab-titles li.title .subtitle {
+  display: block;
+}
+
+@media screen and (max-width: 750px) {
+  .Tabs ul.tab-titles li.title .subtitle {
+    display: none;
+  }
+}
+
+.Tabs {
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "image image content"
+    "image image titles";
+}
+
+@media screen and (max-width: 1025px) {
+  .Tabs {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image image"
+      "content titles";
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Tabs {
+    grid-template-areas:
+      "titles"
+      "image"
+      "content";
+  }
+}
