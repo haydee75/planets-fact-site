@@ -9,7 +9,7 @@ const Menu = (props) => {
     <NavLink
       onClick={() => setToggleMenu(!toggleMenu)}
       className={data.name}
-      to={"/planet/" + data.name}
+      to={"/planets-fact-site/" + data.name}
       key={data.name}
     >
       {data.name}

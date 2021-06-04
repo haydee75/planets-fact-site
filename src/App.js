@@ -11,7 +11,7 @@ const App = () => {
       <Router>
         <Menu datas={datas} />
         <Switch>
-          <Route path="/planet/:name">
+          <Route path="/planets-fact-site/:name">
             <Planet datas={datas} />
           </Route>
           <Route path="/">
